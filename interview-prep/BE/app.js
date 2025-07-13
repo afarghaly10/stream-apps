@@ -49,11 +49,11 @@ app.use(bodyParser.urlencoded({extended: false, verify: rawBodySaver}));
 app.use(bodyParser.json({verify: rawBodySaver}));
 
 
-
 // Routes
-
+const routes = require('./src/routes');
 
 // using the routes
+app.use('/', routes);
 
 
 module.exports = app;
